@@ -6,9 +6,9 @@ Class Dict : Hashtable{
        }
        Return $this[$key]
    }
+   Dict($Hash) : base($Hash) {}  
 }
 
-$PicnicItems = [Dict]::new()
-$PicnicItems.add('apples', '5')
+$PicnicItems = [Dict]@{apples=5}
 Write-Host "I will bring" ($PicnicItems.Get('apples', 0)) "apples" 
 Write-Host "I will bring" ($PicnicItems.Get('bananas', 0)) "bananas" 
